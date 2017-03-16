@@ -1,0 +1,28 @@
+# Only include dotfiles
+/*
+!.*
+
+# Ignore generic folders
+.CFUserTextEncoding
+.DS_Store
+
+# Include only ssh-config
+.ssh/
+# !.ssh/config
+
+# Only include iPython profile
+.ipython/
+# !.ipython/profile_default/ipython_config.py
+
+# Ignore specific things
+.astropy
+.cups
+.dropbox
+.emacs.d
+.matplotlib
+.subversion
+
+# History files
+.*_history
+.histfile
+.zcompdump
