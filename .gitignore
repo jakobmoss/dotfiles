@@ -17,15 +17,20 @@
 !.ipython/profile_default/ipython_config.py
 
 # Ignore specific things
+.anyconnect
 .astropy
 .cups
 .dropbox
 .emacs.d
 .homebrew_token
 .matplotlib
+.rnd
 .subversion
+.viminfo
+.Xauthority
 
-# History files
+# History files and stuff
+.cache
 .*_history
 .histfile
 .zcompdump
