@@ -1,11 +1,6 @@
 ######################################################
 #  .zshrc -- zsh resource file                       #
 #                                                    #
-# Author: Jakob R. Mosumgaard <jakob.moss@gmail.com> #
-# Time-stamp: <2017-03-14 11:50:50 moss>             #
-#                                                    #
-# Thanks: Mathias Dannesbo <neic@neic.dk>            #
-#                                                    #
 # Is sourced if interactive.                         #
 ######################################################
 
@@ -19,7 +14,7 @@ set noclobber
 ulimit -n 2048
 
 # Git-token for Homebrew
-export HOMEBREW_GITHUB_API_TOKEN=852d924d0989ccbe0552699e4dade44592ea5f88
+source ~/.homebrew_token
 
 # Display Danish letters correctly
 export LANG=en_US.UTF-8

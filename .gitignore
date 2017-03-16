@@ -21,6 +21,7 @@
 .cups
 .dropbox
 .emacs.d
+.homebrew_token
 .matplotlib
 .subversion
 
