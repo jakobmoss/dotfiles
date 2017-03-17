@@ -33,4 +33,5 @@
 .cache
 .*_history
 .histfile
+.serverauth*
 .zcompdump

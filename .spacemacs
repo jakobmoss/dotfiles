@@ -320,7 +320,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup 'trailing
    ))
 
 (defun dotspacemacs/user-init ()
@@ -371,6 +371,19 @@ you should place your code here."
   ;; Ask before quitting
   (fset 'yes-or-no-p 'y-or-n-p)
   (setq confirm-kill-emacs (quote y-or-n-p))
+
+  ;; -------------------
+  ;; More configurations
+  ;; -------------------
+
+  ;; Indentation
+  (indent-guide-global-mode 1)
+
+  ;; Show 80-column marker (without fci-mode!)
+  (setq-default
+   whitespace-line-column 80
+   whitespace-style       '(face lines-tail))
+  (add-hook 'prog-mode-hook #'whitespace-mode)
 
   ;; -----------
   ;; Major modes
