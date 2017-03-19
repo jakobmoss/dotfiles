@@ -58,6 +58,19 @@ function mkvenvsys {
     echo '~/venvs/NAME/pyenv.cfg have been modified !'
 }
 
+function mkvenvipy {
+    CWD=`pwd`
+    cd ~/venvs/ && python3 -m venv "$@"
+    workon "$@"
+    pip install ipython
+    echo 'iPython has been installed!'
+    deactivate
+    cd "$@" && sed -i.bak s/false/true/g pyvenv.cfg
+    cd $CWD
+    unset CWD
+    echo '~/venvs/NAME/pyenv.cfg have been modified !'
+}
+
 function rmvenv {
     rm -r ~/venvs/"$@"
 }
@@ -225,7 +238,7 @@ if [[ -n "$SSH_CLIENT" || -n "$SSH2_CLIENT" ]]; then
 else
     eval PR_HOST='${PR_GREEN}%M${PR_NO_COLOR}' # no SSH
 fi
- 
+
 eval PR_RET='%(?..${PR_RED}%?${PR_NO_COLOR} )'
 
 # set the prompt
