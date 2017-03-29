@@ -5,6 +5,7 @@
 # Ignore generic folders
 .CFUserTextEncoding
 .DS_Store
+.Trash
 
 # Include only ssh-config
 .ssh/*
