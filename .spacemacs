@@ -355,6 +355,9 @@ you should place your code here."
              (locate-dominating-file buffer-file-name ".dir-locals.el")
              "/venv/")))))
 
+  ;; Load my LaTeX-skeleton
+  (load "~/templates/astrotex/lisp/skeleton-astro.el")
+
   ;; -------------
   ;; From old conf
   ;; -------------
