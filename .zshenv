@@ -20,4 +20,4 @@ export PATH=${PATH}:${HOME}/adipack/bin
 
 # Garstec
 export PATH=${PATH}:${STARHOME}/BIN/common
-export PATH=${PATH}:${STARHOME}/BIN/x86_64_darwin164
+export PATH=${PATH}:${STARHOME}/BIN/x86_64_darwin165
