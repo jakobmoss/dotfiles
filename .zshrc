@@ -30,8 +30,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Adipls
 export aprgdir=${HOME}/adipack
 
-# Garstec
-export STARHOME=${HOME}/garstec
+# Garstec (STARHOME set in .zshenv)
 source ${STARHOME}/initstar.sh
 
 #------------------------------
