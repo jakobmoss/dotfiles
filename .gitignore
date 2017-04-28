@@ -36,3 +36,4 @@
 .histfile
 .serverauth*
 .zcompdump
+.lesshst
