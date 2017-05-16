@@ -14,6 +14,7 @@ export PATH=${PATH}:${HOME}/BASTA
 
 # StarPy
 export PYTHONPATH=${PYTHONPATH}:${HOME}/starpy
+export PATH=${PATH}:${HOME}/starpy/bin
 
 # Adipls
 export PATH=${PATH}:${HOME}/adipack/bin
