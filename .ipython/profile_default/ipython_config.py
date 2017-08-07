@@ -22,9 +22,9 @@ c.InteractiveShellApp.matplotlib = 'qt5'
 
 ## If true, IPython will populate the user namespace with numpy, pylab, etc. and
 #  an ``import *`` is done from numpy and pylab, when using pylab mode.
-# 
+#
 #  When False, pylab mode should not import any names into the user namespace.
-c.InteractiveShellApp.pylab_import_all = True
+c.InteractiveShellApp.pylab_import_all = False
 
 
 #------------------------------------------------------------------------------
