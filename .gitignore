@@ -27,6 +27,7 @@
 .homebrew_token
 .matplotlib
 .rnd
+.rstudio-desktop
 .subversion
 .viminfo
 .Xauthority
