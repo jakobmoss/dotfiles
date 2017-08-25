@@ -146,7 +146,7 @@ export icloud='/Users/moss/Library/Mobile Documents/com~apple~CloudDocs/'
 
 # Temporary folders
 export work='/Users/moss/nextCloud/phd/projects/'
-export teach='/Users/moss/nextCloud/au-teach/numfys2017/'
+export teach='/Users/moss/nextCloud/au-teach/starplan2017/'
 
 # Git
 alias gs='git status'
