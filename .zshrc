@@ -146,6 +146,7 @@ export icloud='/Users/moss/Library/Mobile Documents/com~apple~CloudDocs/'
 
 # Temporary folders
 export work='/Users/moss/nextCloud/phd/projects/'
+export paper='/Users/moss/nextCloud/phd/papers/atmos/'
 export teach='/Users/moss/nextCloud/au-teach/starplan2017/'
 
 # Git
