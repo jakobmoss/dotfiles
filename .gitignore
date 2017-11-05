@@ -18,19 +18,22 @@
 !.ipython/profile_default/ipython_config.py
 
 # Ignore specific things
+.Xauthority
 .anyconnect
 .astropy
 .config
 .cups
 .dropbox
 .emacs.d
+.grip
 .homebrew_token
+.local
 .matplotlib
+.pympress
 .rnd
 .rstudio-desktop
 .subversion
 .viminfo
-.Xauthority
 
 # History files and stuff
 .cache

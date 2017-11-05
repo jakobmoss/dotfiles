@@ -366,6 +366,11 @@ you should place your code here."
   ;; Load my LaTeX-skeleton
   (load "~/templates/astrotex/lisp/skeleton-astro.el")
 
+  ;; Cleveref in RefTeX
+  (defun reftex-format-cref (label def-fmt ref-style)
+    (format "\\cref{%s}" label))
+  (setq reftex-format-ref-function 'reftex-format-cref)
+
   ;; -------------
   ;; From old conf
   ;; -------------
