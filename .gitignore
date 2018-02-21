@@ -21,6 +21,8 @@
 .Xauthority
 .anyconnect
 .astropy
+.bash_sessions
+.cisco
 .config
 .cups
 .dropbox
