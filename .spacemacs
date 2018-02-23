@@ -70,7 +70,9 @@ values."
      ; php
      (python :variables
              python-shell-interpreter "python3"
-             flycheck-python-pycompile-executable "python3")
+             flycheck-python-pycompile-executable "python3"
+             flycheck-python-pylint-executable "python3"
+             flycheck-python-flake8-executable "python3")
      ; yaml
 
      ;; 12 Operating systems
