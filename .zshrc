@@ -158,7 +158,7 @@ alias gf='git fetch'
 #alias xgterm='xgterm -ls &'
 
 # R
-alias rr='/usr/local/bin/r'
+# alias rr='/usr/local/bin/r'
 
 # System maintaince
 cle () {
@@ -200,6 +200,21 @@ up () {
         sudo tlmgr update --self
         sudo tlmgr update --all
     fi
+}
+
+# Python maintainance
+pip2up () {
+    pipupinner pip2
+}
+
+pip3up () {
+    pipupinner pip3
+}
+
+function pipupinner() {
+    $1 --version
+    $1 install --upgrade pip
+    $1 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 $1 install -U
 }
 
 #------------------------------
