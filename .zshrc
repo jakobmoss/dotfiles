@@ -138,16 +138,9 @@ alias ew='emacs -nw'
 alias eq='emacs -nw -q'
 
 # Folders
-export tutdir='/Users/moss/Dropbox/tutor/2015/'
-export studir='/Users/moss/nextCloud/au-studie/kurser/'
-export bscdir='/Users/moss/nextCloud/au-studie/bachelorprojekt/'
-export phd='/Users/moss/nextCloud/phd/'
-export icloud='/Users/moss/Library/Mobile Documents/com~apple~CloudDocs/'
-
-# Temporary folders
-export work='/Users/moss/nextCloud/phd/projects/'
-export paper='/Users/moss/work/papers/atmos'
-export teach='/Users/moss/nextCloud/au-teach/starplan2017/'
+export phd='/Users/mpaadmin/nextCloud/phd/'
+export work='/Users/mpaadmin/nextCloud/phd/projects/'
+export paper='/Users/mpaadmin/work/papers/atmos'
 
 # Git
 alias gs='git status'
