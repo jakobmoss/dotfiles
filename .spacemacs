@@ -173,10 +173,10 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 12
+                               :size 13
                                :weight normal
                                :width normal
-                               :powerline-scale 1.1)
+                               :powerline-scale 1.2)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -384,7 +384,10 @@ you should place your code here."
   (add-hook 'before-save-hook 'time-stamp)
 
   ;; I do not like line-wrap...
-  (setq default-truncate-lines t)
+  (set-default 'truncate-lines t)
+  (global-set-key (kbd "C-c w") 'toggle-truncate-lines)
+  (global-set-key (kbd "C-c v") 'visual-line-mode)
+
 
   ;; Ask before quitting
   (fset 'yes-or-no-p 'y-or-n-p)

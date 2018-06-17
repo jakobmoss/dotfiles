@@ -145,6 +145,7 @@ export paper='/Users/mpaadmin/work/papers/atmos'
 # Git
 alias gs='git status'
 alias gf='git fetch'
+alias gfs='gf; gs'
 
 # ds9 and iraf
 #alias ds9='ds9 -language en'
