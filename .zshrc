@@ -141,8 +141,8 @@ alias eq='emacs -nw -q'
 export phd='/Users/moss/nextCloud/phd/'
 export work='/Users/moss/nextCloud/phd/projects/'
 export stagger='/Users/moss/nextCloud/phd/projects/stagger/'
-export paper='/Users/moss/work/papers/staggerII/'
-export talk='/Users/moss/work/talks/staggertalk/'
+export paper='/Users/moss/production/papers/staggerII/'
+export talk='/Users/moss/production/talks/staggertalk/'
 
 # Git
 alias gs='git status'
