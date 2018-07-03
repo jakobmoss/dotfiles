@@ -6,7 +6,7 @@
 
 # NOTE: Path-stuff is moved to .zshenv !
 export EDITOR="emacsclient -nw -a nano"
-export GDFONTPATH=/Users/moss/Library/Fonts:$GDFONTPATH
+export GDFONTPATH=${HOME}:${GDFONTPATH}
 
 set noclobber
 
@@ -138,9 +138,11 @@ alias ew='emacs -nw'
 alias eq='emacs -nw -q'
 
 # Folders
-export phd='/Users/mpaadmin/nextCloud/phd/'
-export work='/Users/mpaadmin/nextCloud/phd/projects/'
-export paper='/Users/mpaadmin/work/papers/atmos'
+export phd='/Users/moss/nextCloud/phd/'
+export work='/Users/moss/nextCloud/phd/projects/'
+export stagger='/Users/moss/nextCloud/phd/projects/stagger/'
+export paper='/Users/moss/work/papers/staggerII/'
+export talk='/Users/moss/work/talks/staggertalk/'
 
 # Git
 alias gs='git status'
