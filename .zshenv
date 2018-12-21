@@ -23,4 +23,12 @@ export PATH=${PATH}:${HOME}/adipack/bin
 # Garstec
 export STARHOME=${HOME}/garstec
 export PATH=${PATH}:${STARHOME}/BIN/common
-export PATH=${PATH}:${STARHOME}/BIN/x86_64_darwin176
+export PATH=${PATH}:${STARHOME}/BIN/x86_64_darwin177
+
+#------------------------------
+# Pyenv
+#------------------------------
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi

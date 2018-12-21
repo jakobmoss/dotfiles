@@ -31,6 +31,7 @@
 .homebrew_token
 .local
 .matplotlib
+.pyenv
 .pympress
 .rnd
 .rstudio-desktop

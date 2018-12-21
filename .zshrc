@@ -36,6 +36,10 @@ source ${STARHOME}/initstar.sh
 #------------------------------
 # Python and virtualenv
 #------------------------------
+# Fix of problems with open files (Jedi/Spacemacs issue)
+# (github.com/davidhalter/jedi/issues/1229)
+alias fixopenfiles='sudo launchctl limit maxfiles 2048 524288'
+
 # Emulate virtualenvwrapper commands (ish)
 function workon {
     source ~/venvs/"$@"/bin/activate
@@ -143,6 +147,7 @@ export work='/Users/moss/nextCloud/phd/projects/'
 export stagger='/Users/moss/nextCloud/phd/projects/stagger/'
 export paper='/Users/moss/production/papers/staggerII/'
 export talk='/Users/moss/production/talks/staggertalk/'
+export teach='/Users/moss/Nextcloud/au-teach/starplan2018'
 
 # Git
 alias gs='git status'
@@ -278,7 +283,17 @@ case $TERM in
         ;;
 esac
 
+
 #------------------------------
 # Highlighting
 #------------------------------
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+#------------------------------
+# Pyenv
+#------------------------------
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
