@@ -10,8 +10,9 @@ export PATH=${HOME}/bin:${PATH}
 # Research-stuff
 #------------------------------
 # BASTA
-export PYTHONPATH=${PYTHONPATH}:${HOME}/BASTA
-export PATH=${PATH}:${HOME}/BASTA
+export BASTADIR=${HOME}/BASTA
+export PYTHONPATH=${PYTHONPATH}:${BASTADIR}
+export PATH=${PATH}:${BASTADIR}
 
 # StarPy
 export PYTHONPATH=${PYTHONPATH}:${HOME}/starpy
