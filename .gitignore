@@ -26,10 +26,12 @@
 .config
 .cups
 .dropbox
+.dustmapsrc
 .emacs.d
 .grip
 .homebrew_token
 .idlerc
+.keras
 .local
 .matplotlib
 .pyenv
