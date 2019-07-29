@@ -6,6 +6,7 @@
 	a = add
 	p = push
 	d = diff
+	b = branch
 	co = checkout
 	pl = pull
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
