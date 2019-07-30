@@ -42,7 +42,7 @@ values."
      ; erc
 
      ;; 2 Checkers
-     spell-checking
+     (spell-checking :variables spell-checking-enable-by-default nil)
      syntax-checking
 
      ;; 3 Completion
@@ -388,7 +388,6 @@ you should place your code here."
   (set-default 'truncate-lines t)
   (global-set-key (kbd "C-c w") 'toggle-truncate-lines)
   (global-set-key (kbd "C-c v") 'visual-line-mode)
-
 
   ;; Ask before quitting
   (fset 'yes-or-no-p 'y-or-n-p)
