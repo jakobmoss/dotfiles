@@ -250,15 +250,14 @@ fi
 if [[ -n "$SSH_CLIENT" || -n "$SSH2_CLIENT" ]]; then
     eval PR_HOST='${PR_YELLOW}%M${PR_NO_COLOR}' #SSH
 else
-    eval PR_HOST='${PR_GREEN}%M${PR_NO_COLOR}' # no SSH
+    eval PR_HOST='${PR_GREEN}%m${PR_NO_COLOR}' # no SSH
 fi
 
 eval PR_RET='%(?..${PR_RED}%?${PR_NO_COLOR} )'
 
-# set the prompt
-PS1=$'${PR_RET}${PR_CYAN}[${PR_USER}${PR_CYAN}@${PR_HOST}${PR_CYAN}][${PR_BLUE}%~${PR_CYAN}] # ${PR_USER_OP}%{$reset_color%}'
+# Set the prompt (short path from unix.stackexchange.com/questions/273529)
+PS1=$'${PR_RET}${PR_CYAN}[${PR_USER}${PR_CYAN}@${PR_HOST}${PR_CYAN}][${PR_BLUE}%(4~|%-1~/…/%2~|%3~)${PR_CYAN}] # ${PR_USER_OP}%{$reset_color%}'
 PS2=$'%_>'
-
 RPROMPT='${PR_CYAN}$(date +%T)%{$reset_color%}'
 
 #------------------------------
@@ -295,3 +294,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
+
+
+#------------------------------
+# iTerm shell integration
+#------------------------------
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
