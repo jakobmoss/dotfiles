@@ -36,6 +36,9 @@ source ${STARHOME}/initstar.sh
 # For thesis: Get bibliography from BibDesk
 alias upbib='cp /Users/moss/Library/Mobile\ Documents/com\~apple\~CloudDocs/work/references/library.bib .'
 
+# Emulate Grendel
+alias grendelEmulate='source /Users/moss/work/grendel/setup/emulate_grendel.sh'
+
 #------------------------------
 # Python and virtualenv
 #------------------------------
@@ -146,7 +149,8 @@ alias eq='emacs -nw -q'
 
 # Folders
 export phd='/Users/moss/nextCloud/phd/'
-export work='/Users/moss/nextCloud/phd/projects/'
+export phd='/Users/moss/nextCloud/postdoc/'
+export work='/Users/moss/nextCloud/postdoc/projects/'
 export stagger='/Users/moss/nextCloud/phd/projects/stagger/'
 export icloud='/Users/moss/Library/Mobile Documents/com~apple~CloudDocs'
 

@@ -18,6 +18,7 @@
 # Ignore specific things
 .Xauthority
 .anyconnect
+.aspell*
 .astropy
 .bash_sessions
 .cisco
@@ -33,6 +34,7 @@
 .local
 .matplotlib
 .pyenv
+.pylint.d
 .pympress
 .rnd
 .rstudio-desktop
