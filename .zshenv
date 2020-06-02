@@ -2,9 +2,9 @@
 # Path settings (moved from .zshrc) to please Spacemacs
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# Basic path
+# Homebrew and basic path
+export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH=${HOME}/bin:${PATH}
-export PATH=/usr/local/bin:${PATH}
 
 #------------------------------
 # Research-stuff
