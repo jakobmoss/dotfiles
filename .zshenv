@@ -9,6 +9,10 @@ export PATH=${HOME}/bin:${PATH}
 #------------------------------
 # Research-stuff
 #------------------------------
+# Validation of BASTA
+export PYTHONPATH=${PYTHONPATH}:${HOME}/validation
+export PATH=${PATH}:${HOME}/validation/bin
+
 # BASTA
 export BASTADIR=${HOME}/BASTA
 export PYTHONPATH=${PYTHONPATH}:${BASTADIR}
