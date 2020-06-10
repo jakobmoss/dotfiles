@@ -149,7 +149,7 @@ alias eq='emacs -nw -q'
 
 # Folders
 export phd='/Users/moss/nextCloud/phd/'
-export phd='/Users/moss/nextCloud/postdoc/'
+export postdoc='/Users/moss/nextCloud/postdoc/'
 export work='/Users/moss/nextCloud/postdoc/projects/'
 export stagger='/Users/moss/nextCloud/phd/projects/stagger/'
 export icloud='/Users/moss/Library/Mobile Documents/com~apple~CloudDocs'

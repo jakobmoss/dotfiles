@@ -13,6 +13,9 @@ export PATH=${HOME}/bin:${PATH}
 export PYTHONPATH=${PYTHONPATH}:${HOME}/validation
 export PATH=${PATH}:${HOME}/validation/bin
 
+# Emulating grendel
+export GRENDELSHARE=${HOME}/work/grendel/milkyway
+
 # BASTA
 export BASTADIR=${HOME}/BASTA
 export PYTHONPATH=${PYTHONPATH}:${BASTADIR}
