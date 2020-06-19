@@ -245,9 +245,9 @@ done
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
 
 # Check the UID
-if [[ $UID -ge 1000 ]]; then # normal user
-    eval PR_USER='${PR_GREEN}%n${PR_NO_COLOR}'
-    eval PR_USER_OP='${PR_GREEN}%#${PR_NO_COLOR}'
+if [[ $UID -ge 500 ]]; then # normal user
+    eval PR_USER='${PR_CYAN}%n${PR_NO_COLOR}'
+    eval PR_USER_OP='${PR_CYAN}%#${PR_NO_COLOR}'
 elif [[ $UID -eq 0 ]]; then # root
     eval PR_USER='${PR_RED}%n${PR_NO_COLOR}'
     eval PR_USER_OP='${PR_RED}%#${PR_NO_COLOR}'
@@ -263,9 +263,9 @@ fi
 eval PR_RET='%(?..${PR_RED}%?${PR_NO_COLOR} )'
 
 # Set the prompt (short path from unix.stackexchange.com/questions/273529)
-PS1=$'${PR_RET}${PR_CYAN}[${PR_USER}${PR_CYAN}@${PR_HOST}${PR_CYAN}][${PR_BLUE}%(4~|%-1~/…/%2~|%3~)${PR_CYAN}] # ${PR_USER_OP}%{$reset_color%}'
+PS1=$'${PR_RET}${PR_BLUE}[${PR_USER}${PR_BLUE}@${PR_HOST}${PR_BLUE}][${PR_BLUE}%(4~|%-1~/…/%2~|%3~)${PR_BLUE}] ${PR_USER_OP}%{$reset_color%} '
 PS2=$'%_>'
-RPROMPT='${PR_CYAN}$(date +%T)%{$reset_color%}'
+RPROMPT='${PR_BLUE}$(date +%T)%{$reset_color%}'
 
 #------------------------------
 # Window title
