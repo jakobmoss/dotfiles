@@ -46,6 +46,10 @@ alias grendelEmulate='source /Users/moss/work/grendel/setup/emulate_grendel.sh'
 # (github.com/davidhalter/jedi/issues/1229)
 alias fixopenfiles='sudo launchctl limit maxfiles 2048 524288'
 
+# Quick aliases for the pyenv virtualenv commands
+alias pya='pyenv activate'
+alias pyd='source deactivate'
+
 # Emulate virtualenvwrapper commands (ish)
 function workon {
     source ~/venvs/"$@"/bin/activate
@@ -83,10 +87,6 @@ function mkvenvipy {
 function rmvenv {
     rm -r ~/venvs/"$@"
 }
-
-# IPython with prettier interactive backend and no banner
-# (not needed if using a iPython-startup script with the same settings)
-alias ipy='ipython --matplotlib qt5 --no-banner'
 
 
 #------------------------------

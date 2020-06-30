@@ -15,6 +15,9 @@
 # Tip: Fix git-path in .term2/it2git
 .iterm2*
 
+# Spacemacs things
+.spacemacs.env
+
 # Ignore specific things
 .Xauthority
 .anyconnect
@@ -30,6 +33,7 @@
 .grip
 .homebrew_token
 .idlerc
+.insert-shebang.log
 .keras
 .local
 .matplotlib
