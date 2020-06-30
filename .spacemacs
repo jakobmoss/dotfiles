@@ -81,6 +81,8 @@ This function should only modify configuration layer settings."
              python-formatter 'black
              )
      shell-scripts
+     sql
+     yaml
 
      ;; Operating systems
      osx ;; modifier keybindings is overwritten in user-config
