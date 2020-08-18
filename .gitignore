@@ -50,5 +50,6 @@
 .*_history
 .histfile
 .serverauth*
+.zcompcache
 .zcompdump
 .lesshst
