@@ -9,6 +9,10 @@ export PATH=${HOME}/bin:${PATH}
 #------------------------------
 # Research-stuff
 #------------------------------
+# Interpolation for BASTA
+export PYTHONPATH=${PYTHONPATH}:${HOME}/interpolation
+export PATH=${PATH}:${HOME}/interpolation/bin
+
 # Validation of BASTA
 export PYTHONPATH=${PYTHONPATH}:${HOME}/validation
 export PATH=${PATH}:${HOME}/validation/bin

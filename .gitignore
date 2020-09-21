@@ -44,6 +44,7 @@
 .rstudio-desktop
 .subversion
 .viminfo
+.wget-hsts
 
 # History files and stuff
 .cache
