@@ -10,8 +10,9 @@ export PATH=${HOME}/bin:${PATH}
 # Research-stuff
 #------------------------------
 # Interpolation for BASTA
-export PYTHONPATH=${PYTHONPATH}:${HOME}/interpolation
-export PATH=${PATH}:${HOME}/interpolation/bin
+# --> Merged into BASTA itself
+# export PYTHONPATH=${PYTHONPATH}:${HOME}/interpolation
+# export PATH=${PATH}:${HOME}/interpolation/bin
 
 # Validation of BASTA
 export PYTHONPATH=${PYTHONPATH}:${HOME}/validation
@@ -23,7 +24,7 @@ export GRENDELSHARE=${HOME}/work/grendel/milkyway
 # BASTA
 export BASTADIR=${HOME}/BASTA
 export PYTHONPATH=${PYTHONPATH}:${BASTADIR}
-export PATH=${PATH}:${BASTADIR}
+export PATH=${PATH}:${BASTADIR}/bin
 
 # StarPy
 export PYTHONPATH=${PYTHONPATH}:${HOME}/starpy
