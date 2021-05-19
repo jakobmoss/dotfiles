@@ -76,7 +76,8 @@ This function should only modify configuration layer settings."
      lua
      markdown
      (python :variables
-             python-backend 'lsp
+             ; python-backend 'lsp
+             python-backend 'anaconda
              python-fill-column 88
              python-formatter 'black
              )
@@ -110,6 +111,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(
      openwith
      rainbow-mode
+     circadian
      )
 
    ;; A list of packages that cannot be updated.
@@ -554,6 +556,32 @@ before packages are loaded."
   ;; Indentation
   (indent-guide-global-mode 1)
 
+
+  ;; -----
+  ;; Theme change with circadian
+  ;; -----
+  ;; Note that the selected theme can be manually overwritten by switching themes
+  ;; with the standard Spacemacs system (i.e, `SPC T n' / `M-m T n')
+
+  ;; --> Option 1: Auto-times based on location
+  ;; (use-package circadian
+  ;;   :ensure t
+  ;;   :config
+  ;;   (setq calendar-latitude 55.7)
+  ;;   (setq calendar-longitude 12.5)
+  ;;   (setq circadian-themes '((:sunrise . spacemacs-light)
+  ;;                            (:sunset  . spacemacs-dark)))
+  ;;   (circadian-setup))
+
+  ;; Option 2: Fixed times (set to match iOS night shift)
+  (use-package circadian
+    :ensure t
+    :config
+    (setq circadian-themes '(("7:00" . spacemacs-light)
+                             ("18:00" . spacemacs-dark)))
+    (circadian-setup))
+
+
   ;; -----
   ;; LaTeX
   ;; -----
@@ -574,7 +602,6 @@ before packages are loaded."
   ;; dired-mode
   (setq openwith-associations '(("\\.pdf\\'" "open" (file))))
   (openwith-mode t)
-
   )
 
   ;; magit

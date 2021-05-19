@@ -45,6 +45,7 @@
 .subversion
 .viminfo
 .wget-hsts
+.zsh_sessions
 
 # History files and stuff
 .cache
