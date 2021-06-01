@@ -36,9 +36,6 @@ source ${STARHOME}/initstar.sh
 # For thesis: Get bibliography from BibDesk
 alias upbib='cp /Users/moss/Library/Mobile\ Documents/com\~apple\~CloudDocs/work/references/library.bib .'
 
-# Emulate Grendel
-alias grendelEmulate='source /Users/moss/work/grendel/setup/emulate_grendel.sh'
-
 #------------------------------
 # Python and virtualenv
 #------------------------------
@@ -295,13 +292,13 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 #------------------------------
-# Pyenv
+# Pyenv load (also in .zshenv)
 #------------------------------
 if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
-
 
 #------------------------------
 # iTerm shell integration

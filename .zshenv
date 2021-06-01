@@ -9,17 +9,9 @@ export PATH=${HOME}/bin:${PATH}
 #------------------------------
 # Research-stuff
 #------------------------------
-# Interpolation for BASTA
-# --> Merged into BASTA itself
-# export PYTHONPATH=${PYTHONPATH}:${HOME}/interpolation
-# export PATH=${PATH}:${HOME}/interpolation/bin
-
 # Validation of BASTA
 export PYTHONPATH=${PYTHONPATH}:${HOME}/validation
 export PATH=${PATH}:${HOME}/validation/bin
-
-# Emulating grendel
-export GRENDELSHARE=${HOME}/work/grendel/milkyway
 
 # BASTA
 export BASTADIR=${HOME}/BASTA
@@ -41,7 +33,10 @@ export PATH=${PATH}:${STARHOME}/BIN/x86_64_darwin196
 #------------------------------
 # Pyenv
 #------------------------------
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
