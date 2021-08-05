@@ -31,7 +31,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 export aprgdir=${HOME}/adipack
 
 # Garstec (STARHOME set in .zshenv)
-source ${STARHOME}/initstar.sh
+# source ${STARHOME}/initstar.sh
 
 # For thesis: Get bibliography from BibDesk
 alias upbib='cp /Users/moss/Library/Mobile\ Documents/com\~apple\~CloudDocs/work/references/library.bib .'
