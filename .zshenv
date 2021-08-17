@@ -18,9 +18,13 @@ export BASTADIR=${HOME}/BASTA
 export PYTHONPATH=${PYTHONPATH}:${BASTADIR}
 export PATH=${PATH}:${BASTADIR}/bin
 
-# StarPy
+# StarPy (no grids; tools)
 export PYTHONPATH=${PYTHONPATH}:${HOME}/starpy
 export PATH=${PATH}:${HOME}/starpy/bin
+
+# AUbuild (grids; the new StarPy)
+export PYTHONPATH=${PYTHONPATH}:${HOME}/aubuild
+export PATH=${PATH}:${HOME}/aubuild/bin
 
 # Adipls
 export PATH=${PATH}:${HOME}/adipack/bin
@@ -28,7 +32,7 @@ export PATH=${PATH}:${HOME}/adipack/bin
 # Garstec
 export STARHOME=${HOME}/garstec
 export PATH=${PATH}:${STARHOME}/BIN/common
-export PATH=${PATH}:${STARHOME}/BIN/x86_64_darwin205
+export PATH=${PATH}:${STARHOME}/BIN/x86_64_darwin206
 
 #------------------------------
 # Pyenv
