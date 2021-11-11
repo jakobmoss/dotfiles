@@ -18,6 +18,11 @@ export BASTADIR=${HOME}/BASTA
 export PYTHONPATH=${PYTHONPATH}:${BASTADIR}
 export PATH=${PATH}:${BASTADIR}/bin
 
+# BASTA for PLATO
+export PLATODIR=${HOME}/plato
+export PYTHONPATH=${PYTHONPATH}:${PLATODIR}
+export PATH=${PATH}:${PLATODIR}/bin
+
 # StarPy (no grids; tools)
 export PYTHONPATH=${PYTHONPATH}:${HOME}/starpy
 export PATH=${PATH}:${HOME}/starpy/bin
