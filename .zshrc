@@ -36,6 +36,9 @@ export aprgdir=${HOME}/adipack
 # For thesis: Get bibliography from BibDesk
 alias upbib='cp /Users/moss/Library/Mobile\ Documents/com\~apple\~CloudDocs/work/references/library.bib .'
 
+# Emulate Grendels settings for testing
+alias grendelEmulate='source /Users/moss/work/grendel/setup/emulate_grendel.sh'
+
 #------------------------------
 # Python and virtualenv
 #------------------------------

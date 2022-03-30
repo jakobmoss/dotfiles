@@ -34,9 +34,11 @@
 .homebrew_token
 .idlerc
 .insert-shebang.log
+.ipython
 .keras
 .local
 .matplotlib
+.jupyter
 .pyenv
 .pylint.d
 .pympress
