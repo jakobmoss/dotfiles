@@ -111,7 +111,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(
      openwith
      rainbow-mode
-     circadian
+     ; circadian
      )
 
    ;; A list of packages that cannot be updated.
@@ -574,12 +574,12 @@ before packages are loaded."
   ;;   (circadian-setup))
 
   ;; Option 2: Fixed times (set to match iOS night shift)
-  (use-package circadian
-    :ensure t
-    :config
-    (setq circadian-themes '(("7:00" . spacemacs-light)
-                             ("18:00" . spacemacs-dark)))
-    (circadian-setup))
+  ;  (use-package circadian
+  ;    :ensure t
+  ;    :config
+  ;    (setq circadian-themes '(("7:00" . spacemacs-light)
+  ;                             ("18:00" . spacemacs-dark)))
+  ;    (circadian-setup))
 
 
   ;; -----
