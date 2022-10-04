@@ -2,8 +2,10 @@
 # Path settings (moved from .zshrc) to please Spacemacs
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# Homebrew and basic path
-export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
+# Homebrew set-up moved to (.zprofile) as requested by new installer
+# export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
+
+# My own bin first in the path
 export PATH=${HOME}/bin:${PATH}
 
 # Personal path stuff

@@ -14,14 +14,11 @@ set noclobber
 ulimit -n 2048
 
 # Git-token for Homebrew
-source ~/.homebrew_token
+# source ~/.homebrew_token
 
 # Display Danish letters correctly
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-# More completions
-fpath=(/usr/local/share/zsh-completions $fpath)
 
 #------------------------------
 # Research-stuff
@@ -36,9 +33,6 @@ export aprgdir=${HOME}/adipack
 # For thesis: Get bibliography from BibDesk
 alias upbib='cp /Users/moss/Library/Mobile\ Documents/com\~apple\~CloudDocs/work/references/library.bib .'
 
-# Emulate Grendels settings for testing
-alias grendelEmulate='source /Users/moss/work/grendel/setup/emulate_grendel.sh'
-
 #------------------------------
 # Python and virtualenv
 #------------------------------
@@ -51,42 +45,42 @@ alias pya='pyenv activate'
 alias pyd='source deactivate'
 
 # Emulate virtualenvwrapper commands (ish)
-function workon {
-    source ~/venvs/"$@"/bin/activate
-}
+# function workon {
+#     source ~/venvs/"$@"/bin/activate
+# }
 
-function mkvenv {
-    CWD=`pwd`
-    cd ~/venvs/ && python3 -m venv "$@"
-    cd $CWD
-    unset CWD
-}
+# function mkvenv {
+#     CWD=`pwd`
+#     cd ~/venvs/ && python3 -m venv "$@"
+#     cd $CWD
+#     unset CWD
+# }
 
-function mkvenvsys {
-    CWD=`pwd`
-    cd ~/venvs/ && python3 -m venv "$@"
-    cd "$@" && sed -i.bak s/false/true/g pyvenv.cfg
-    cd $CWD
-    unset CWD
-    echo '~/venvs/NAME/pyenv.cfg have been modified !'
-}
+# function mkvenvsys {
+#     CWD=`pwd`
+#     cd ~/venvs/ && python3 -m venv "$@"
+#     cd "$@" && sed -i.bak s/false/true/g pyvenv.cfg
+#     cd $CWD
+#     unset CWD
+#     echo '~/venvs/NAME/pyenv.cfg have been modified !'
+# }
 
-function mkvenvipy {
-    CWD=`pwd`
-    cd ~/venvs/ && python3 -m venv "$@"
-    workon "$@"
-    pip install ipython
-    echo 'iPython has been installed!'
-    deactivate
-    cd "$@" && sed -i.bak s/false/true/g pyvenv.cfg
-    cd $CWD
-    unset CWD
-    echo '~/venvs/NAME/pyenv.cfg have been modified !'
-}
+# function mkvenvipy {
+#     CWD=`pwd`
+#     cd ~/venvs/ && python3 -m venv "$@"
+#     workon "$@"
+#     pip install ipython
+#     echo 'iPython has been installed!'
+#     deactivate
+#     cd "$@" && sed -i.bak s/false/true/g pyvenv.cfg
+#     cd $CWD
+#     unset CWD
+#     echo '~/venvs/NAME/pyenv.cfg have been modified !'
+# }
 
-function rmvenv {
-    rm -r ~/venvs/"$@"
-}
+# function rmvenv {
+#     rm -r ~/venvs/"$@"
+# }
 
 
 #------------------------------
@@ -101,6 +95,13 @@ setopt HIST_IGNORE_SPACE
 #------------------------------
 # Completion
 #------------------------------
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 autoload -U compinit
 compinit
 
@@ -122,14 +123,12 @@ _force_rehash() {
 #------------------------------
 # Keybingings
 #------------------------------
-
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
 #------------------------------
 # Aliases
 #------------------------------
-
 # List
 alias ls='ls -G -h'
 alias l='ls -G -h'
@@ -151,7 +150,6 @@ alias eq='emacs -nw -q'
 export phd='/Users/moss/nextCloud/phd/'
 export postdoc='/Users/moss/nextCloud/postdoc/'
 export work='/Users/moss/nextCloud/postdoc/projects/'
-export stagger='/Users/moss/nextCloud/phd/projects/stagger/'
 export icloud='/Users/moss/Library/Mobile Documents/com~apple~CloudDocs'
 
 # Git
@@ -232,7 +230,6 @@ alias suspend='lock & sudo pm-suspend'
 #------------------------------
 # Prompt and colors
 #------------------------------
-
 # load some modules
 autoload -U colors zsh/terminfo # Used in the colour alias below
 colors
@@ -291,8 +288,8 @@ esac
 #------------------------------
 # Highlighting
 #------------------------------
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+# New location of Homebrew -- automatically detected
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #------------------------------
 # Pyenv load (also in .zshenv)
