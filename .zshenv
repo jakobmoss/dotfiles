@@ -6,6 +6,10 @@
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH=${HOME}/bin:${PATH}
 
+# Personal path stuff
+export PYTHONPATH=${PYTHONPATH}:${HOME}/fuji
+export PATH=${PATH}:${HOME}/fuji
+
 #------------------------------
 # Research-stuff
 #------------------------------
