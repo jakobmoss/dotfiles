@@ -19,6 +19,7 @@
 .spacemacs.env
 
 # Ignore specific things
+.Rhistory
 .Xauthority
 .anyconnect
 .aspell*
@@ -44,6 +45,7 @@
 .rstudio-desktop
 .subversion
 .viminfo
+.vscode
 .wget-hsts
 .zsh_sessions
 
