@@ -31,7 +31,16 @@ export aprgdir=${HOME}/adipack
 # source ${STARHOME}/initstar.sh
 
 # For thesis: Get bibliography from BibDesk
-alias upbib='cp /Users/moss/Library/Mobile\ Documents/com\~apple\~CloudDocs/work/references/library.bib .'
+# alias upbib='cp /Users/moss/Library/Mobile\ Documents/com\~apple\~CloudDocs/work/references/library.bib .'
+
+
+#------------------------------
+# SSH tunneling
+#------------------------------
+alias opentunnel='ssh -f -N -D 9090 archive'
+alias tunnelchrome='"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --user-data-dir="$HOME/proxy-profile" --proxy-server="socks5://localhost:9090"'
+alias findtunnel='ps aux | grep 9090'
+
 
 #------------------------------
 # Python and virtualenv
@@ -147,10 +156,10 @@ alias ew='emacs -nw'
 alias eq='emacs -nw -q'
 
 # Folders
-export phd='/Users/moss/nextCloud/phd/'
-export postdoc='/Users/moss/nextCloud/postdoc/'
-export work='/Users/moss/nextCloud/postdoc/projects/'
-export icloud='/Users/moss/Library/Mobile Documents/com~apple~CloudDocs'
+export phd='/Users/au324463/nextCloud/phd/'
+export postdoc='/Users/au324463/nextCloud/postdoc/'
+export work='/Users/au324463/nextCloud/postdoc/projects/'
+export icloud='/Users/au324463/Library/Mobile Documents/com~apple~CloudDocs'
 
 # Git
 alias gs='git status'

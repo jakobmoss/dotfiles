@@ -53,7 +53,7 @@
 
 # History files and stuff
 .cache
-.*_history
+.*_history*
 .histfile
 .serverauth*
 .zcompcache
