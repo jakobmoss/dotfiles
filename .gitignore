@@ -40,6 +40,7 @@
 .local
 .matplotlib
 .jupyter
+.pgadmin
 .pyenv
 .pylint.d
 .pympress
