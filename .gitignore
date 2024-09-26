@@ -28,6 +28,7 @@
 .cisco
 .config
 .cups
+.docker
 .dropbox
 .dustmapsrc
 .emacs.d
@@ -39,6 +40,7 @@
 .keras
 .local
 .matplotlib
+.mcf
 .jupyter
 .pgadmin
 .pyenv

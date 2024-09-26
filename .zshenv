@@ -16,13 +16,13 @@ export PATH=${PATH}:${HOME}/fuji
 # Research-stuff
 #------------------------------
 # Validation of BASTA
-export PYTHONPATH=${PYTHONPATH}:${HOME}/validation
-export PATH=${PATH}:${HOME}/validation/bin
+#export PYTHONPATH=${PYTHONPATH}:${HOME}/validation
+#export PATH=${PATH}:${HOME}/validation/bin
 
 # BASTA
-export BASTADIR=${HOME}/BASTA
-export PYTHONPATH=${PYTHONPATH}:${BASTADIR}
-export PATH=${PATH}:${BASTADIR}/bin
+#export BASTADIR=${HOME}/BASTA
+#export PYTHONPATH=${PYTHONPATH}:${BASTADIR}
+#export PATH=${PATH}:${BASTADIR}/bin
 
 # BASTA for PLATO
 export PLATODIR=${HOME}/plato

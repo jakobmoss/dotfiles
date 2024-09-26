@@ -38,6 +38,8 @@ export aprgdir=${HOME}/adipack
 # SSH tunneling
 #------------------------------
 alias opentunnel='ssh -f -N -D 9090 archive'
+alias opentunnelS='ssh -f -N -D 9090 storage'
+alias opentunnelT='ssh -f -N -D 9090 trinity'
 alias tunnelchrome='"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --user-data-dir="$HOME/proxy-profile" --proxy-server="socks5://localhost:9090"'
 alias findtunnel='ps aux | grep 9090'
 
