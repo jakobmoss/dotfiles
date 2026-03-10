@@ -46,6 +46,7 @@
 .pyenv
 .pylint.d
 .pympress
+.pypirc
 .rnd
 .rstudio-desktop
 .subversion
