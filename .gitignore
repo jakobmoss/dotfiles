@@ -63,3 +63,8 @@
 .zcompcache
 .zcompdump
 .lesshst
+
+# Get some things back in
+!.config/emacs-plus
+!.config/doom
+
