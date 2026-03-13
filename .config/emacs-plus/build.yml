@@ -1,0 +1,5 @@
+# Example build.yml
+icon: dragon-plus
+#patches:
+#  - fix-window-role
+#inject_path: true
