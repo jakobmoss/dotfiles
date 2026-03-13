@@ -12,6 +12,22 @@ export PATH=${HOME}/bin:${PATH}
 export PYTHONPATH=${PYTHONPATH}:${HOME}/fuji
 export PATH=${PATH}:${HOME}/fuji
 
+# Doom Emacs
+export PATH=${PATH}:${HOME}/.emacs.d/bin
+
+
+# ~~~~~~~~~~~~
+# Editor stuff
+# ~~~~~~~~~~~~
+#export EMACS_SOCKET_NAME=~/.emacs.d/server
+
+if [ $(uname) = "Darwin" ]; then
+    export EDITOR="emacsclient -nw -a nano"
+else
+    export EDITOR=nano
+fi
+
+
 #------------------------------
 # Research-stuff
 #------------------------------
