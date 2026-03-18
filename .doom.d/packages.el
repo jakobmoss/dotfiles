@@ -57,3 +57,6 @@
 ;; Automatic switching of dark/light mode
 ;; --> https://github.com/LionyxML/auto-dark-emacs
 (package! auto-dark)
+
+;; Other
+(package! ultra-scroll)

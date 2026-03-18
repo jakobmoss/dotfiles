@@ -120,3 +120,68 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+;; ---------------
+;; Global settings
+;; ---------------
+
+;; Overwrite modifier keys on MacOS
+;; --> Consider just swapping to still enable CMD+V for pasting
+(setq mac-command-modifier 'meta
+      mac-option-modifier 'none)
+
+;; Use lsp on large repos.
+(with-eval-after-load 'lsp-mode
+  (setq lsp-file-watch-threshold 3500)
+  )
+
+;; Smooth scrolling on MacOS
+(use-package ultra-scroll
+  :if (eq window-system 'mac)
+  :init
+  (setq scroll-conservatively 101 ; important!
+        scroll-margin 0)
+  :config
+  (ultra-scroll-mode 1))
+
+
+;; -----
+;; Tramp
+;; -----
+
+; Disable everything other than git for version control to speedup TRAMP.
+;
+; https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
+; # How to speed up TRAMP?
+(setq vc-handled-backends '(Git))
+
+; Reuse the same ssh connection everywhere by inheriting ControlMaster from
+; ~/.ssh/config for TRAMP.
+;
+; https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
+; # TRAMP does not use default ssh ControlPath
+(setq tramp-use-ssh-controlmaster-options nil)
+
+; Disable file locks. Safe if no other Emacs sessions are modifying the same
+; remote file.
+;
+; https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
+; # How to speed up TRAMP?
+; https://coredumped.dev/2025/06/18/making-tramp-go-brrrr./#getting-started
+(setq remote-file-name-inhibit-locks t)
+
+; Even when chosing external methods (scp, rsync), files smaller than
+; tramp-copy-size-limit, use inline methods. The default is 10kB, but
+; experiments posted on coredumped.dev show that the cutoff is around 2MB.
+;
+; https://www.gnu.org/software/tramp/#External-methods-1
+; https://coredumped.dev/2025/06/18/making-tramp-go-brrrr./#getting-started
+(setq tramp-copy-size-limit (* 1024 1024)) ; 1MB
+
+; Set the default method to rsync. The default method is used when accessing
+; files with /-:hostname: . coredumped.dev says rsync is 3-4 times faster than
+; the default scp after the initial transfer.
+;
+; https://coredumped.dev/2025/06/18/making-tramp-go-brrrr./#getting-started
+(customize-set-variable 'tramp-default-method "rsync")
