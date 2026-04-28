@@ -146,6 +146,17 @@
   (ultra-scroll-mode 1))
 
 
+;;
+;; LaTeX
+;;
+
+;; Fix the bug with font commands shortcuts
+;; --> From https://github.com/doomemacs/doomemacs/issues/5951
+(after! tex
+  (map! :leader
+      (:when (modulep! :editor fold)
+       ("C-f" nil))))
+
 ;; -----
 ;; Tramp
 ;; -----
